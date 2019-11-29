@@ -1,4 +1,4 @@
-FROM php:7.4-rc-fpm
+FROM php:7.4-fpm
 RUN apt-get update && apt-get install -y gnupg2
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -

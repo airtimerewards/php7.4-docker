@@ -1,6 +1,6 @@
 FROM php:7.4-fpm
 RUN apt-get update && apt-get install -y gnupg2
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install -y \
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     libsodium-dev \
     libxml2-dev \
     libzip-dev \
-    nodejs=10.\* \
+    nodejs=12.\* \
     unzip \
     wget \
     yarn

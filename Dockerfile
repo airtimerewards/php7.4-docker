@@ -33,8 +33,8 @@ RUN docker-php-ext-configure intl
 RUN docker-php-ext-install bcmath gd intl pdo pdo_mysql soap sockets sodium zip
 
 # Install xdebug
-RUN pecl install xdebug geospatial-beta mongodb
-RUN docker-php-ext-enable xdebug geospatial mongodb
+RUN pecl install xdebug geospatial-beta mongodb redis
+RUN docker-php-ext-enable xdebug geospatial mongodb redis
 RUN echo "error_reporting = E_ALL" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "display_startup_errors = On" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "display_errors = On" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
